@@ -1,0 +1,28 @@
+/* GLOBAL STYLES */
+body {
+  background-color: coral;
+}
+div#main {
+  margin: 0px auto;
+  width: 60%;
+}
+div#banner-prime {
+  text-align: center;
+}
+div#banner-prime h1 { }
+div#banner-prime h2 { }
+
+/* LOGIN PAGE */
+form#access-portal p {
+  text-align: center;
+}
+
+/* REDIRECT PAGE */
+p#redirect-msg {
+  text-align: center;
+}
+
+/* DOCUMENT FOOTER */
+div#footer {
+  text-align: center;
+}
