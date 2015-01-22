@@ -16,9 +16,7 @@
       $handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(PDOException $e) {
         echo "ERROR: " . $e->getMessage();
-        
     }
-
     return $handler;
   }
 
@@ -33,13 +31,34 @@
 
       $query = $handler->query($sql);
       $r = $query->fetch();
-      echo "<pre>".print_r($r,true)."</pre>";
-      #$query->execute(array('groupnum' => $args));
 
     } catch(PDOException $e) {
         echo "ERROR: " . $e->getMessage(); 
     }
 
     return $r[0];
+  }
+  
+  function displayParty($dbh, $arg) {
+    try {
+      $sql = "SELECT
+                lastname,
+                firstname,
+                attending,
+                foodoption
+              FROM
+                person
+              WHERE
+                groupnum='$arg'"; 
+      
+      $query = $dbh->prepare($sql);
+      $query->execute();
+      $result = $query->fetchAll();
+
+    } catch(PDOException $e) {
+        echo "ERROR: " . $e->getMessage();
+    }
+  
+    return $result;
   }
 ?>
