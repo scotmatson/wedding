@@ -12,34 +12,34 @@
 
     try {
       $handler = new PDO("mysql:host=".HOSTNAME.";dbname=".DATABASE, USERNAME, PASSWORD);
+      # Setting our error mode and allowing for exceptions to be handled.
       $handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(PDOException $e) {
         echo "ERROR: " . $e->getMessage();
+        
     }
-   # return $db_connect;
-  }
-/*
 
-  function sqlSelect($dbc, $sql) {
-    return $sql;
+    return $handler;
   }
 
-  function userLogin($dbc, $args) {
+  function userLogin($handler, $arg) {
     try {
       $sql = "SELECT
                 groupnum
               FROM
                 person
               WHERE
-                groupnum=:groupnum";
+                groupnum='$arg'";
 
-      $query = $dbc->prepare($sql);
-      $query->execute(array('groupnum' => $args));
+      $query = $handler->query($sql);
+      $r = $query->fetch();
+      echo "<pre>".print_r($r,true)."</pre>";
+      #$query->execute(array('groupnum' => $args));
+
     } catch(PDOException $e) {
         echo "ERROR: " . $e->getMessage(); 
     }
-    if(count($query))  
-      echo var_dump($query);
+
+    return $r[0];
   }
-*/
 ?>

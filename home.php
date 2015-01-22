@@ -1,9 +1,6 @@
 <?php
   session_start();
 
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(-1); 
 
   # If data has been sent from the login input
   if(isset($_POST['login'])) {
@@ -11,9 +8,21 @@
     include("./includes/header.php");
 
     # Open a database connection
-    $handler = dbConnect();  
+    $dbh = dbConnect();  
 
-    $content = "./views/user-info.php";
+    # Query the DB for user credentials    
+    $r = userLogin($dbh, $_POST['login']);        
+
+    # Credentials are authorized
+    if ($r == $_POST['login']) {
+      # Serve user account
+      $content = "./views/user-info.php";
+    }
+    else {
+      # Close the connection and serve the redirect
+      $dbh = null; 
+      $content = "./views/redirect.php";
+    }
   } 
   else {
     $content = "./views/redirect.php"; 
