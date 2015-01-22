@@ -1,15 +1,24 @@
 <?php
+  # Requires to use the date(<arg>); function
+  date_default_timezone_set("America/Los_Angeles");
+
   # Establishes a connection with the database
   function dbConnect() {
-    require($root."database/security/login.php");
+    # Make sure the proper drivers exist 
+    #print_r(PDO::getAvailableDrivers());
+
+    # Obtain the security credentials
+    require("../security/login.php");
+
     try {
-      $db_connect = new PDO("mysql:host=".$db_hostname.";dbname=".$db_database, $db_username, $db_password);
-      $db_connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $handler = new PDO("mysql:host=".HOSTNAME.";dbname=".DATABASE, USERNAME, PASSWORD);
+      $handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(PDOException $e) {
         echo "ERROR: " . $e->getMessage();
     }
-    return $db_connect;
+   # return $db_connect;
   }
+/*
 
   function sqlSelect($dbc, $sql) {
     return $sql;
@@ -32,4 +41,5 @@
     if(count($query))  
       echo var_dump($query);
   }
+*/
 ?>

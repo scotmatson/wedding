@@ -1,6 +1,9 @@
 <body>
   <div id="main">
-    <?php include("includes/banner.php"); ?>
+    <?php
+      include("includes/banner.php");
+      include("includes/nav.php");
+    ?>
     <form id="access-portal" name="access-portal" action="home.php" method="POST">
       <fieldset>
         <p><label for="login">
