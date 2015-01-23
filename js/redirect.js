@@ -2,7 +2,7 @@ var timer = 5;
  
 function countdown() {
   if (timer <= 0) {
-    window.location = "portal.php";
+    window.location = "index.php";
   }
   else {
     document.getElementById("countdown").innerHTML=timer;

@@ -2,7 +2,7 @@
   <div id="main">
     <?php include("includes/banner.php"); ?>
     <div id="content">
-      <form id="access-portal" action="index.php" method="POST">
+      <form id="access-portal" action="home.php" method="POST">
         <fieldset>
           <p><label for="login">
             Enter the name of your party listed on your invitation

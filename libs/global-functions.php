@@ -63,12 +63,10 @@
   function updateDB($dbh, $arg) {
     $arg = rtrim($arg, ".");
     $arg = explode(".",$arg);
-    #echo "<pre>".print_r($arg,true)."</pre>";
-    $attending  = $arg[0];
-    $firstname  = $arg[1];
-    $lastname   = $arg[2];
-    $foodoption = $arg[3];
-    print_r($foodoption);
+    $attending  = isset($arg[0]) ? $arg[0] : null;
+    $firstname  = isset($arg[1]) ? $arg[1] : null;
+    $lastname   = isset($arg[2]) ? $arg[2] : null;
+    $foodoption = isset($arg[3]) ? $arg[3] : null;
 
     try {
       $sql = "UPDATE

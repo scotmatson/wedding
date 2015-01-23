@@ -9,13 +9,13 @@
 
       $data = "";
       foreach($records as $record) {
-        $isAttending = ($record['attending'])      ? 'checked'             : '';
-        $checked     = ($isAttending)                  ? 1                     : 0;
-        echo "<pre>".print_r($record['foodoption'],true)."</pre>";
-        $choice     = ($record['foodoption'])     ? $record['foodoption'] : 'Undecided'; 
-        $filet      = ($choice == 'Filet Mignon') ? 'selected'            : '';
-        $chicken    = ($choice == 'Chicken')      ? 'selected'            : '';
-        $vegetarian = ($choice == 'Vegetarian')   ? 'selected'            : '';
+        $isAttending = ($record['attending']) ? 'checked' : '';
+        $checked = ($isAttending) ? 1 : 0;
+
+        $choice = ($record['foodoption']) ? $record['foodoption'] : ''; 
+        $filet = ($choice == 'Filet Mignon') ? 'selected' : '';
+        $chicken = ($choice == 'Chicken') ? 'selected' : '';
+        $vegetarian = ($choice == 'Vegetarian') ? 'selected' : '';
 
         $data .= 
           "<tr> 
@@ -27,20 +27,19 @@
             "<td><input type='hidden' name='lastname[]' value='".$record['lastname']."'></td>".
             "<td>
               <select name='foodoption[]'>
-                <option value='undecided'>Undecided</option> 
-                <option value='Filet' ".$filet.">Filet Mignon</option>
+                <option value='".null."'></option> 
+                <option value='Filet Mignon' ".$filet.">Filet Mignon</option>
                 <option value='Chicken'".$chicken.">Chicken</option>
                 <option value='Vegetarian'".$vegetarian.">Vegetarian</option>
               </select>
              </td>".
           "</tr>";
       }
-      # Insert changes
     ?>
-    </script>
+
     <div id="content">
       <h2>R.S.V.P.</h2>
-      <form action="index.php?page=confirmation.php" method="POST">
+      <form action="home.php?page=confirmation.php" method="POST">
         <table>
           <thead>
             <th>Attending</th>
