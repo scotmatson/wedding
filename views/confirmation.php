@@ -3,15 +3,25 @@
     <?php
       include("includes/banner.php");
       include("includes/nav.php");
-     
-
-      echo "<pre>" .print_r($_POST['name'])."</pre>";
-
-
-
+      
+      var_dump($_POST);
+      
+      # Access the DB
+      $dbh = dbConnect(); 
+      # Sort the data, assuming all rows will have the same number of records
+      for($i = 0; $i< count($_POST['attending']); ++$i) {
+        $record = "";
+        foreach($_POST as $key) {
+          $record .= $key[$i];
+        }  
+        # Update the records
+        updateDb($dbh, $record); 
+      }
+    
     ?>
     <div id="content">
-      <h2>Confirmation</h2>
+      <h2>Confirmation Page</h2>
+      <p>Redirect.... </p>
     </div>
   </div>
 

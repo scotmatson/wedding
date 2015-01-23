@@ -61,4 +61,26 @@
   
     return $result;
   }
+
+  function updateDB($dbh, $arg) {
+    echo "<p>$arg</p>";
+    /*
+    try {
+      $sql = "UPDATE
+                person
+              SET
+                attending='$attending',
+                foodoption='$foodoption'
+              WHERE
+                (lastname='$lastname' AND firstname='$firstname')";
+
+      $query = $dbh->prepare($sql);
+      $query->execute();
+
+    } catch(PDOException $e) {
+        echo "ERROR: " .$e->getMessage();
+    }
+   */
+  }
+
 ?>
