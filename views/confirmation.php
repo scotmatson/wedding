@@ -4,15 +4,13 @@
       include("includes/banner.php");
       include("includes/nav.php");
       
-      var_dump($_POST);
-      
       # Access the DB
       $dbh = dbConnect(); 
       # Sort the data, assuming all rows will have the same number of records
       for($i = 0; $i< count($_POST['attending']); ++$i) {
         $record = "";
         foreach($_POST as $key) {
-          $record .= $key[$i];
+          $record .= $key[$i].".";
         }  
         # Update the records
         updateDb($dbh, $record); 

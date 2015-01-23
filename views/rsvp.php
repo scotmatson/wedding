@@ -11,7 +11,7 @@
       foreach($records as $record) {
         $isAttending = ($record['attending'])      ? 'checked'             : '';
         $checked     = ($isAttending)                  ? 1                     : 0;
-
+        echo "<pre>".print_r($record['foodoption'],true)."</pre>";
         $choice     = ($record['foodoption'])     ? $record['foodoption'] : 'Undecided'; 
         $filet      = ($choice == 'Filet Mignon') ? 'selected'            : '';
         $chicken    = ($choice == 'Chicken')      ? 'selected'            : '';
@@ -21,14 +21,16 @@
           "<tr> 
             <td><input type='checkbox' onclick='setAttendance(this);'".$isAttending.">".
             "<input type='hidden' name='attending[]' value='".$checked."'</td>".
-            "<td><input type='text' name='name[]' value='".$record['firstname'].
-              "&nbsp;".$record['lastname']."' readonly></td>".
+            "<td><input type='text' value='".$record['firstname']."&nbsp;".
+              $record['lastname']."' readonly></td>".
+            "<td><input type='hidden' name='firstname[]' value='".$record['firstname']."'></td>".
+            "<td><input type='hidden' name='lastname[]' value='".$record['lastname']."'></td>".
             "<td>
               <select name='foodoption[]'>
                 <option value='undecided'>Undecided</option> 
-                <option value='filet' ".$filet.">Filet Mignon</option>
-                <option value='chicken'".$chicken.">Chicken</option>
-                <option value='vegetarian'".$vegetarian.">Vegetarian</option>
+                <option value='Filet' ".$filet.">Filet Mignon</option>
+                <option value='Chicken'".$chicken.">Chicken</option>
+                <option value='Vegetarian'".$vegetarian.">Vegetarian</option>
               </select>
              </td>".
           "</tr>";

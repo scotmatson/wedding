@@ -2,7 +2,6 @@
   # Requires to use the date(<arg>); function
   date_default_timezone_set("America/Los_Angeles");
 
-  # Establishes a connection with the database
   function dbConnect() {
     # Make sure the proper drivers exist 
     #print_r(PDO::getAvailableDrivers());
@@ -35,7 +34,6 @@
     } catch(PDOException $e) {
         echo "ERROR: " . $e->getMessage(); 
     }
-
     return $r[0];
   }
   
@@ -63,8 +61,15 @@
   }
 
   function updateDB($dbh, $arg) {
-    echo "<p>$arg</p>";
-    /*
+    $arg = rtrim($arg, ".");
+    $arg = explode(".",$arg);
+    #echo "<pre>".print_r($arg,true)."</pre>";
+    $attending  = $arg[0];
+    $firstname  = $arg[1];
+    $lastname   = $arg[2];
+    $foodoption = $arg[3];
+    print_r($foodoption);
+
     try {
       $sql = "UPDATE
                 person
@@ -80,7 +85,5 @@
     } catch(PDOException $e) {
         echo "ERROR: " .$e->getMessage();
     }
-   */
   }
-
 ?>
