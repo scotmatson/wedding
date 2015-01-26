@@ -1,0 +1,71 @@
+/* GLOBAL STYLES */
+@font-face {
+  font-family: parklane;
+  src: url("../assets/fonts/parklane.ttf");
+}
+@font-face {
+  font-family: riesling;
+  src: url("../assets/fonts/riesling.ttf");
+}
+             
+body {
+  background: url(../assets/img/art-deco.jpg) no-repeat;
+  background-color: black;
+  background-position: 50% 0% , center;
+  background-size: 700px 690px;
+}
+div#main {
+  min-width: 700px;
+  text-align: center;
+}
+div#banner-prime {
+  line-height: 53px;
+  margin-top: 190px;
+  margin-left: 17px;
+  min-width: 700px;
+}
+div#banner-prime h1 {
+  color: silver;
+  font-family: parklane;
+  font-size: 3.5em; 
+}
+div#banner-prime h2 {
+  color: silver;
+  font-family: riesling;
+  font-size: 4em;
+}
+/*** * * HEADER * * ***/
+/*** * * NAVIGATION * * ***/
+nav#site-nav ol {
+  text-align: center;
+}
+nav#site-nav li {
+  display: inline-block;
+  margin: 0 auto;
+}
+/*** * * DOCUMENT FOOTER * * ***/
+div#footer {
+  margin-top: 193px;
+  text-align: center;
+}
+div#footer p {
+  color: silver;
+  text-align: center;
+}
+/*** * * LOGIN PAGE * * ***/
+form#access-portal {
+  margin-top: 5px;
+}
+form#access-portal label {
+  color: silver;
+}
+form#access-portal p {
+  text-align: center;
+}
+form#access-portal p:last-child {
+  margin-top: 10px;
+}
+/*** * * REDIRECT PAGE * * ***/ 
+p#redirect-msg {
+  text-align: center;
+}

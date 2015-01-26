@@ -11,5 +11,6 @@
   <head>
     <title>Diana and Scot Tie the Knot</title>
     <link rel="stylesheet" type="text/javascript" href="css/meyer-reset.css">
-    <link rel="stylesheet" type="text/javascript" href="css/global.css"> 
+    <link rel="stylesheet" type="text/javascript" href="css/main.css"> 
+    <link rel="shortcut icon" href="/assets/img/bride-and-groom.ico">
   </head>

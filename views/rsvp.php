@@ -16,7 +16,7 @@
         $filet = ($choice == 'Filet Mignon') ? 'selected' : '';
         $chicken = ($choice == 'Chicken') ? 'selected' : '';
         $vegetarian = ($choice == 'Vegetarian') ? 'selected' : '';
-
+        $child = ($choice == 'Childs Plate') ? 'selected' : '';
         $data .= 
           "<tr> 
             <td><input type='checkbox' onclick='setAttendance(this);'".$isAttending.">".
@@ -31,6 +31,7 @@
                 <option value='Filet Mignon' ".$filet.">Filet Mignon</option>
                 <option value='Chicken'".$chicken.">Chicken</option>
                 <option value='Vegetarian'".$vegetarian.">Vegetarian</option>
+                <option value='Childs Plate'".$child.">Child's Plate</option>
               </select>
              </td>".
           "</tr>";

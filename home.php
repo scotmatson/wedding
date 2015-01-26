@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include("./includes/header.php");
+  include("./includes/header-main.php");
 
   if(isset($_POST['login'])) {
     $_SESSION['user'] = $_POST['login'];
