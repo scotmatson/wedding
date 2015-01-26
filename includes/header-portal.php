@@ -10,7 +10,7 @@
 <html>
   <head>
     <title>Diana and Scot Tie the Knot</title>
-    <link rel="stylesheet" type="text/javascript" href="css/meyer-reset.css">
-    <link rel="stylesheet" type="text/javascript" href="css/portal.css"> 
+    <link rel="stylesheet" type="text/css" href="css/meyer-reset.css">
+    <link rel="stylesheet" type="text/css" href="css/portal.css"> 
     <link rel="shortcut icon" href="/assets/img/bride-and-groom.ico">
   </head>

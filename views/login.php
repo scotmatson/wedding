@@ -1,6 +1,6 @@
 <body>
   <div id="main">
-    <?php include("includes/banner.php"); ?>
+    <?php include("includes/banner-portal.php"); ?>
     <div id="content">
       <form id="access-portal" action="home.php" method="POST">
         <fieldset>

@@ -1,7 +1,7 @@
 <body>
   <div id="main">
     <?php
-      include("includes/banner.php");
+      include("includes/banner-main.php");
       include("includes/nav.php");
 
       $dbh = dbConnect();  
@@ -40,7 +40,7 @@
 
     <div id="content">
       <h2>R.S.V.P.</h2>
-      <form action="home.php?page=confirmation.php" method="POST">
+      <form id="rsvp" action="home.php?page=confirmation.php" method="POST">
         <table>
           <thead>
             <th>Attending</th>
