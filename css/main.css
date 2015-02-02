@@ -10,49 +10,91 @@
 }
 /* GLOBAL */
 body {
-  background: url(../assets/img/art-deco.jpg) no-repeat;
+  background: url(../assets/img/art-deco-main.jpg) no-repeat;
   background-color: black;
   background-position: 50% 20px;
   background-size: 700px 650px;
+  color: silver;
+}
+a {
+  color: coral;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 div#main {
+  height: 498px;
   margin: 0 auto;
   text-align: center;
   width: 700px;
+}
+div#content {
+  margin: 70px auto;
+  overflow: auto;
+  width: 400px;
 }
 
 /*** * * HEADER * * ***/
 div#banner-main {
   line-height: 3em;
   margin-top: 45px;
-  margin-left: 8px;
+  margin-left: 3px;
   min-width: 700px;
 }
 div#banner-main h1 {
-  color: silver;
   font-family: parklane;
   font-size: 3.2em; 
 }
 
 /*** * * NAVIGATION * * ***/
 nav#site-nav ol {
-  margin-top: 30px;
+  margin-top: 33px;
+  padding-right: 17px;
+}
+span#nav-left {
+  margin-right: 50px;
+}
+span#nav-right {
+  margin-left: 50px;
 }
 nav#site-nav li {
-  background-color: white;
+  background-color: rgba(0,0,0,0);
   display: inline-block;
+  font-size: 18px;
 }
 nav a {
   text-decoration: none;
   padding: 5px;
 }
-/*** * * RSVP FORM * * ***/
+/*** * * LODGING * * ***/
+table#lodging-info th {
+  font-size: 18px;
+  padding-bottom: 6px;
+  text-decoration: underline;
+}
+.hotel-name {
+  padding: 0.5px;
+  padding-bottom: 10px;
+  width: 100px;
+}
+.hotel-phone {
+  padding: 0.5px;
+  padding-bottom: 10px;
+  width: 110px;
+}
+.hotel-info {
+  padding: 0.5px;
+  padding-bottom: 10px;
+}
 /*** * * DOCUMENT FOOTER * * ***/
 div#footer {
-  margin-top: 177px;
   text-align: center;
 }
 div#footer p {
   color: silver;
   text-align: center;
+}
+/*** * * REDIRECT * * ***/
+p#redirect-msg {
 }

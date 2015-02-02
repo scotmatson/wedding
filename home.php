@@ -11,11 +11,16 @@
     $dbh = dbConnect();  
     # Query the DB for user credentials    
     $results = userLogin($dbh, $_POST['login']);        
-
     # If credentials are authorized
-    if ($results == $_POST['login']) {
+    if (strtoupper($results) == strtoupper($_POST['login'])) {
       # Serve user account
       $page = (isset($_GET['page'])) ? $_GET['page'] : 0;  
+       
+      # If $page has a value
+      if(!empty($page)) { include("views/".$page); }
+      # Otherwise include the default page
+      else { include("views/home.php"); }
+
       $dbh = null;
     }
     # If access is denied
@@ -28,17 +33,17 @@
   } 
   else if(isset($_SESSION['user'])) {
     $page = (isset($_GET['page'])) ? $_GET['page'] : 0;  
+ 
+    # If $page has a value
+    if(!empty($page)) { include("views/".$page); }
+    # Otherwise include the default page
+    else { include("views/home.php"); }
+
   }
   else {
     include("views/redirect.php"); 
     session_destroy();
   }
-
-  # If $page has a value
-  if(!empty($page)) { include("views/".$page); }
-  # Otherwise include the default page
-  else { include("views/home.php"); }
-
-  #include($content);
+ 
   include("./includes/footer.php");
 ?>

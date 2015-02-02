@@ -15,6 +15,7 @@
   background-size: 700px 650px;
 }
 div#main {
+  height: 343px;
   min-width: 700px;
   text-align: center;
 }
@@ -47,18 +48,21 @@ form#access-portal label {
 form#access-portal p {
   text-align: center;
 }
-form#access-portal p:last-child {
+form#access-portal input[type="text"] {
+  border: 3px solid transparent;
   margin-top: 8px;
+  padding: 3px 5px;
 }
-
-/*** * * REDIRECT PAGE * * ***/ 
-p#redirect-msg {
-  text-align: center;
+form#access-portal input[type="text"]:focus {
+  border: 3px inset black;
+  box-shadow: 0px 3px 3px 0px black;
+}
+form#access-portal input[type="submit"] {
+  margin-top: 30px;
 }
 
 /*** * * DOCUMENT FOOTER * * ***/
 div#footer {
-  margin-top: 177px;
   text-align: center;
 }
 div#footer p {

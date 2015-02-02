@@ -39,7 +39,6 @@
     ?>
 
     <div id="content">
-      <h2>R.S.V.P.</h2>
       <form id="rsvp" action="home.php?page=confirmation.php" method="POST">
         <table>
           <thead>
@@ -51,7 +50,7 @@
             <?php echo $data; ?>   
           </tbody>
         </table>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Enter">
       </form>
     </div>
   </div>
