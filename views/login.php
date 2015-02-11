@@ -13,6 +13,5 @@
         </fieldset>
       </form>
     </div>
-    <!--<audio src="assets/wav/married-life.mp3" type="audio/mp3" autoplay></audio>
-    -->
+    <audio src="assets/wav/married-life.mp3" type="audio/mp3" autoplay></audio>
   </div>

@@ -19,13 +19,15 @@
         $child = ($choice == 'Childs Plate') ? 'selected' : '';
         $data .= 
           "<tr> 
-            <td><input type='checkbox' onclick='setAttendance(this);'".$isAttending.">".
-            "<input type='hidden' name='attending[]' value='".$checked."'</td>".
-            "<td><input type='text' value='".$record['firstname']."&nbsp;".
-              $record['lastname']."' readonly></td>".
-            "<td><input type='hidden' name='firstname[]' value='".$record['firstname']."'></td>".
-            "<td><input type='hidden' name='lastname[]' value='".$record['lastname']."'></td>".
-            "<td>
+            <td><input type='checkbox' onclick='setAttendance(this);'".$isAttending.">
+             <input type='hidden' name='attending[]' value='".$checked."'</td>
+             <td>
+               <input type='text' value='".$record['firstname']."&nbsp;".
+                 $record['lastname']."' readonly>
+               <input type='hidden' name='firstname[]' value='".$record['firstname']."'>
+               <input type='hidden' name='lastname[]' value='".$record['lastname']."'>
+            </td>
+            <td>
               <select name='foodoption[]'>
                 <option value='".null."'></option> 
                 <option value='Filet Mignon' ".$filet.">Filet Mignon</option>
@@ -33,8 +35,8 @@
                 <option value='Vegetarian'".$vegetarian.">Vegetarian</option>
                 <option value='Childs Plate'".$child.">Child's Plate</option>
               </select>
-             </td>".
-          "</tr>";
+             </td>
+           </tr>";
       }
     ?>
 
