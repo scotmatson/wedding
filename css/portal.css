@@ -61,6 +61,20 @@ form#access-portal input[type="submit"] {
   margin-top: 30px;
 }
 
+/*** * * REDIRECT * * ***/
+div#redirect-msg {
+  color: silver;
+  margin: 201px auto;
+  padding-top: 20px;
+  width: 350px;
+}
+div#redirect-msg span {
+  color: coral;
+}
+div#redirect-msg p {
+  padding-bottom: 5px;
+}
+
 /*** * * DOCUMENT FOOTER * * ***/
 div#footer {
   text-align: center;

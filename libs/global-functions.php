@@ -67,7 +67,7 @@
     $firstname  = isset($arg[1]) ? $arg[1] : null;
     $lastname   = isset($arg[2]) ? $arg[2] : null;
     $foodoption = isset($arg[3]) ? $arg[3] : null;
-
+    echo "<pre>" .print_r($arg, true). "</pre>";
     try {
       $sql = "UPDATE
                 person

@@ -30,7 +30,7 @@ div#main {
   width: 700px;
 }
 div#content {
-  margin: 70px auto;
+  margin: 60px auto;
   overflow: auto;
   width: 420px;
 }
@@ -67,6 +67,16 @@ nav a {
   text-decoration: none;
   padding: 5px;
 }
+/*** * * REGISTRY * * ***/
+section#poem p {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  text-align: left;
+}
+section#poem + p {
+  font-size: 16px;
+  padding-bottom: 3px;
+}
 /*** * * LODGING * * ***/
 table#lodging-info th {
   font-size: 18px;
@@ -94,7 +104,4 @@ div#footer {
 div#footer p {
   color: silver;
   text-align: center;
-}
-/*** * * REDIRECT * * ***/
-p#redirect-msg {
 }

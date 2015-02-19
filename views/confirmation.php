@@ -18,8 +18,9 @@
     
     ?>
     <div id="content">
-      <h2>Confirmation Page</h2>
-      <p>Redirect.... </p>
+      <h2>Success!</h2>
+      <p>We've gone ahead and updated our database, but feel free to make any changes as you see fit before the deadline.</p>
+      <p>Diana and I are greatly looking forward to having you join us for our special day! See you there.</p>
     </div>
   </div>
 

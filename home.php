@@ -1,7 +1,6 @@
 <?php
   session_start();
-  include("./includes/header-main.php");
-
+  require_once("libs/global-functions.php");
   if(isset($_POST['login'])) {
     $_SESSION['user'] = $_POST['login'];
 
@@ -13,6 +12,7 @@
     $results = userLogin($dbh, $_POST['login']);        
     # If credentials are authorized
     if (strtoupper($results) == strtoupper($_POST['login'])) {
+      include("./includes/header-main.php");
       # Serve user account
       $page = (isset($_GET['page'])) ? $_GET['page'] : 0;  
        
@@ -25,6 +25,7 @@
     }
     # If access is denied
     else {
+      include("./includes/header-portal.php");
       # Close the connection and serve the redirect
       $dbh = null; 
       include("views/redirect.php");
@@ -32,6 +33,7 @@
     }
   } 
   else if(isset($_SESSION['user'])) {
+    include("./includes/header-main.php");
     $page = (isset($_GET['page'])) ? $_GET['page'] : 0;  
  
     # If $page has a value

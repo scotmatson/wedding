@@ -1,8 +1,10 @@
 <body onload="countdown();">
   <div id="main">
     <div id="content">
-      <p id="redirect-msg">
-        An error has occurred. Redirecting in <span id="countdown"><span> seconds.</p>
+      <div id="redirect-msg">
+        <p>Whoops, It looks like something went wrong!</p>
+        <p>Hmm. Give us about <a href="http://www.dianaandscot.com"><span id="countdown"></span></a> seconds and we'll get you back to the login page so you can try again.</p>
+      </div>
     </div>
   </div>
 

@@ -27,7 +27,10 @@
            In our long winding journey, as new husband and wife!</p>
       </section>
 
-      <p>Buuuuut, for those that insist... check back often, we will try to have a registry up soon :)</p>
+      <p>Buuuuut, for those that insist...</p>
+      <ol>
+        <li><a href="http://www.surlatable.com/registry/giftRegistryList.jsp?id=2001147294726">Sur la Table</a></li>
+      </ol>
     </div>
   </div>
 
