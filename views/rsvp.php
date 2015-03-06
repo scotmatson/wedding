@@ -54,9 +54,9 @@
         </table>
         <input type="submit" value="Enter">
       </form>
+      <p>Whoops! I broke something during a recent update and don't have time to fix it at the moment. The 'attending' option is not updating the database properly but fortunatley the meal is still being saved. Go ahead and proceed as normal and as long as you've selected a dinner option we will assume you are coming. Thanks!
     </div>
   </div>
-
   <script type="text/javascript">
     function setAttendance(isAttending) {
       var currVal = isAttending.nextSibling.value;
