@@ -1,4 +1,5 @@
 <?php
+ 
   # Requires to use the date(<arg>); function
   date_default_timezone_set("America/Los_Angeles");
 
@@ -67,7 +68,7 @@
     $firstname  = isset($arg[1]) ? $arg[1] : null;
     $lastname   = isset($arg[2]) ? $arg[2] : null;
     $foodoption = isset($arg[3]) ? $arg[3] : null;
-    echo "<pre>" .print_r($arg, true). "</pre>";
+    #echo "<pre>" .print_r($arg, true). "</pre>";
     try {
       $sql = "UPDATE
                 person
@@ -84,4 +85,23 @@
         echo "ERROR: " .$e->getMessage();
     }
   }
+
+  function displayAttendees($dbh) {
+    try {
+      $sql = "SELECT
+                firstname,
+                lastname
+              FROM
+                person
+              WHERE
+                attending = 1";
+    $query = $dbh->prepare($sql);
+    $query->execute();
+    return $query->fetchAll();
+
+    } catch(PDOException $e) {
+      echo "ERROR: " .$e->getMessage(); 
+    }
+  }
+
 ?>
