@@ -105,3 +105,17 @@ div#footer p {
   color: silver;
   text-align: center;
 }
+
+#guestDataSheet {
+  background-color: black;
+  height: 500px;
+  left: 32px;
+  margin: 0 auto;
+  position: absolute;
+  text-align: left;
+  top: 20px;
+  width: 100%;
+}
+#guestDataSheet tr:nth-child(even) {
+  background-color: darkgreen;
+}

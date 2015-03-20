@@ -90,7 +90,8 @@
     try {
       $sql = "SELECT
                 firstname,
-                lastname
+                lastname,
+                foodoption
               FROM
                 person
               WHERE
